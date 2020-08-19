@@ -5,12 +5,12 @@ module.exports = [
     completed: false
   },
   {
-    owner_id: 2,
+    owner_id: 1,
     task: 'take out the trash',
     completed: false
   },
   {
-    owner_id: 3,
+    owner_id: 1,
     task: 'do laundry',
     completed: false
   }

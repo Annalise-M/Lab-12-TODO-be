@@ -20,7 +20,7 @@ describe('app routes', () => {
     return client.end(done);
   });
 
-  test('returns todos', async() => {
+  test.only('returns todos', async() => {
 
     const expectation = [
       {
