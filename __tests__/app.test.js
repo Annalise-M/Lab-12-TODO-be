@@ -35,7 +35,7 @@ describe('routes', () => {
     return client.end(done);
   });
 
-  test.only ('returns a new todo when creating a new task', async(done) => {
+  test ('returns a new todo when creating a new task', async(done) => {
     const data = await fakeRequest(app)
       .post('/api/todos')
       .send(newTodo)
@@ -47,18 +47,11 @@ describe('routes', () => {
   });
 
 
-  test ('returns all guitars for the user when hitting GET /guitars', async(done) => {
-    const expected = [
-      {
-        brand_name: 'Taylor',
-        color: 'red',
-        id: 4,
-        owner_id: 2,
-        strings: 4,
-      },
-    ];
+  test.only ('returns all todos for the user when hitting GET /todos', async(done) => {
+    const expected = [];
+    
     const data = await fakeRequest(app)
-      .get('/api/guitars')
+      .get('/api/todos')
       .set('Authorization', token)
       .expect('Content-Type', /json/)
       .expect(200);
